@@ -9,6 +9,7 @@ import PartnershipSection from '@/components/sections/partnership-section';
 import CtaSection from '@/components/sections/cta-section';
 import QuoteSection from '@/components/sections/quote-section';
 import ScrollToTopButton from '@/components/ui/scroll-to-top';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
@@ -23,25 +24,41 @@ export default function Home() {
       <main className="relative z-10">
         <HeroSection />
 
-        <QuoteSection 
-          quote="We have a historical opportunity and responsibility to establish a human-centred framework for AI research, education, practice and policy."
-          attribution="Fei-Fei Li, Stanford University & Co-Founder of AI4ALL"
-          className="py-16 md:py-24"
-        />
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <QuoteSection 
+            quote="We have a historical opportunity and responsibility to establish a human-centred framework for AI research, education, practice and policy."
+            attribution="Fei-Fei Li, Stanford University & Co-Founder of AI4ALL"
+            className="py-16 md:py-24"
+          />
+        </div>
 
-        <WhyKeralaSection />
-        <LearnerSegmentsSection />
-        <ThreePillarsSection />
-        <ChallengesSection />
-        <PartnershipSection />
-        <CtaSection />
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <WhyKeralaSection />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <LearnerSegmentsSection />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <ThreePillarsSection />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <ChallengesSection />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <PartnershipSection />
+        </div>
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <CtaSection />
+        </div>
         
-        <QuoteSection 
-          quote="AI will shape the future of work, culture, and communities. Kerala can either be a consumer or a creator. With your partnership, we can ensure every Keralite learns, builds, and creates responsibly with AI. This is our chance to set a global model again, like we did with digital literacy."
-          attribution="AI for Everyone Team"
-          isFinalQuote={true}
-          className="py-16 md:py-24"
-        />
+        <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <QuoteSection 
+            quote="AI will shape the future of work, culture, and communities. Kerala can either be a consumer or a creator. With your partnership, we can ensure every Keralite learns, builds, and creates responsibly with AI. This is our chance to set a global model again, like we did with digital literacy."
+            attribution="AI for Everyone Team"
+            isFinalQuote={true}
+            className="py-16 md:py-24"
+          />
+        </div>
 
       </main>
       <Footer />
