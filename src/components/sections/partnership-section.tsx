@@ -1,8 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { BrainCircuit, DollarSign, Megaphone, Gift, Home, Handshake, BookUser, Wrench, MessageSquareHeart, DoorOpen } from "lucide-react";
-import { Card, CardContent } from "../ui/card";
+import { BrainCircuit, DollarSign, Megaphone, Gift, Home, Handshake, BookUser, Wrench, MessageSquareHeart, DoorOpen, Component } from "lucide-react";
+import { PartnerCard } from "../ui/partner-card";
 
 const partnerTypes = [
   {
@@ -10,6 +10,7 @@ const partnerTypes = [
     title: "Knowledge Partners",
     subtitle: "You have expertise to share",
     icon: BrainCircuit,
+    gradient: "from-blue-500/20 to-cyan-500/20",
     content: [
       { title: "Tech & Industry", description: "AI companies contributing technical know-how, mentorship, and product demos." },
       { title: "Education & Content", description: "Educators designing curriculum, leading workshops, and creating learning materials." },
@@ -20,6 +21,7 @@ const partnerTypes = [
     title: "Financial Partners",
     subtitle: "You provide funding",
     icon: DollarSign,
+    gradient: "from-emerald-500/20 to-green-500/20",
     content: [
       { title: "Program Funding", description: "Sponsor facilitator training, venue costs, operations, and scaling to new districts." },
       { title: "Resource Funding", description: "Support for learning materials, hardware, printed resources, and kit distribution." },
@@ -30,6 +32,7 @@ const partnerTypes = [
     title: "Media & Outreach",
     subtitle: "You amplify our reach",
     icon: Megaphone,
+    gradient: "from-purple-500/20 to-pink-500/20",
     content: [
       { title: "Traditional & Digital Media", description: "Newspapers, TV, radio, and social media partnerships." },
       { title: "Content & Stories", description: "Creating videos, articles, podcasts, and local language content to spread the word." },
@@ -40,6 +43,7 @@ const partnerTypes = [
     title: "Resource Partners",
     subtitle: "You provide tools",
     icon: Gift,
+    gradient: "from-amber-500/20 to-orange-500/20",
     content: [
       { title: "Hardware & Software", description: "Laptops, tablets, demo devices, and free/discounted AI tools." },
       { title: "Materials & Support", description: "Learning resources, books, course licenses, and technical maintenance." },
@@ -50,6 +54,7 @@ const partnerTypes = [
     title: "Community Partners",
     subtitle: "You host on the ground",
     icon: Home,
+    gradient: "from-rose-500/20 to-red-500/20",
     content: [
       { title: "Institutions", description: "Schools, libraries, NGOs, Kudumbashree, and workplaces providing space." },
       { title: "Individual Hosts", description: "Anyone organizing learning circles or mentoring others in their community." },
@@ -86,27 +91,13 @@ const PartnershipSection = () => {
             ))}
           </TabsList>
           
-          {partnerTypes.map(pt => (
-            <TabsContent key={pt.value} value={pt.value} className="mt-8">
-                <Card className="glassmorphic-card border-border/30 overflow-hidden">
-                  <CardContent className="p-8">
-                    <h3 className="font-headline text-2xl font-bold mb-2 flex items-center gap-3">
-                      <pt.icon className="w-7 h-7 text-primary" />
-                      {pt.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 ml-10">{pt.subtitle}</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-10">
-                        {pt.content.map((item, index) => (
-                            <div key={item.title} className="p-4 bg-background/50 rounded-lg animate-fade-in-up" style={{animationDelay: `${index * 150}ms`}}>
-                                <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                                <p className="text-sm text-muted-foreground">{item.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                  </CardContent>
-                </Card>
-            </TabsContent>
-          ))}
+          <div className="mt-8 relative">
+            {partnerTypes.map(pt => (
+                <TabsContent key={pt.value} value={pt.value} className="mt-0 -mx-4">
+                     <PartnerCard {...pt} />
+                </TabsContent>
+            ))}
+          </div>
         </Tabs>
 
         <div className="mt-24 text-center animate-fade-in-up animation-delay-500">
