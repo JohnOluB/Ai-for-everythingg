@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { BrainCircuit, DollarSign, Megaphone, Gift, Home, Handshake, BookUser, Wrench, MessageSquareHeart, DoorOpen, Component } from "lucide-react";
+import { BrainCircuit, DollarSign, Megaphone, Gift, Home, Handshake, BookUser, Wrench, MessageSquareHeart, DoorOpen } from "lucide-react";
 import { PartnerCard } from "../ui/partner-card";
 
 const partnerTypes = [

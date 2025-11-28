@@ -34,7 +34,7 @@ const WhyKeralaSection = () => {
           </div>
           <div className="grid grid-cols-1 gap-6">
             {keyPoints.map((point) => (
-              <div key={point.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary/5 transition-colors">
+              <div key={point.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary/5 transition-colors duration-300">
                 <div className="p-3 bg-primary/10 text-primary rounded-lg mt-1">
                     {point.icon}
                 </div>

@@ -1,10 +1,10 @@
-import { BarChart, Briefcase, ShieldAlert, Siren } from "lucide-react";
+import { TrendingUp, Briefcase, ShieldAlert, Siren } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const challenges = [
   {
-    icon: <BarChart className="w-8 h-8 text-primary" />,
+    icon: <TrendingUp className="w-8 h-8 text-primary" />,
     title: "Skills Gap",
     description: "Students graduate without understanding technologies defining their careers.",
   },
