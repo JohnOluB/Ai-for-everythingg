@@ -60,7 +60,7 @@ const Header = () => {
             <div className="md:hidden">
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" aria-label="Open menu" className="hover:bg-transparent focus-visible:bg-transparent">
+                  <Button size="icon" aria-label="Open menu" className="color-white">
                     <Menu />
                   </Button>
                 </SheetTrigger>
@@ -71,7 +71,7 @@ const Header = () => {
                             <Bot className="h-6 w-6" />
                             <span className="text-foreground">AI for Everyone</span>
                         </Link>
-                        <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
+                        <Button size="icon" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu" className=" color-white     ">
                             <X />
                         </Button>
                     </div>
