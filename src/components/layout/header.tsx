@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
+  { href: "#about", label: "Why Kerala" },
+  { href: "#who-we-serve", label: "Who We Serve" },
   { href: "#approach", label: "Our Approach" },
   { href: "#why-now", label: "Why Now" },
   { href: "#partner", label: "Partners" },

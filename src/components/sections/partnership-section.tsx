@@ -84,7 +84,7 @@ const PartnershipSection = () => {
         <Tabs defaultValue="knowledge" className="w-full animate-fade-in-up animation-delay-300">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 h-auto p-2 bg-background/60 backdrop-blur-sm">
             {partnerTypes.map(pt => (
-              <TabsTrigger key={pt.value} value={pt.value} className="flex-col sm:flex-row h-auto py-3 gap-2 data-[state=active]:bg-primary/10 data-[state=active]:text-primary transition-all duration-300">
+              <TabsTrigger key={pt.value} value={pt.value} className="flex-col sm:flex-row h-auto py-3 gap-2 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:shadow-lg transition-all duration-300">
                 <pt.icon className="w-5 h-5" />
                 <span>{pt.title}</span>
               </TabsTrigger>
@@ -102,7 +102,7 @@ const PartnershipSection = () => {
 
         <div className="mt-24 text-center animate-fade-in-up animation-delay-500">
             <h3 className="font-headline text-2xl font-bold mb-8">How You Can Partner With Us</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+            <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                 {partnershipActions.map((action, index) => (
                     <div key={action.text} className="glassmorphic-card p-4 flex flex-col items-center justify-center gap-3 text-center aspect-square group animate-fade-in-up" style={{animationDelay: `${index * 150}ms`}}>
                         <div className="p-4 bg-primary/10 rounded-full text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
