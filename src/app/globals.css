@@ -62,6 +62,14 @@ html {
   }
 }
 
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
 .animation-delay-2000 {
   animation-delay: 2s;
 }
@@ -96,4 +104,9 @@ html {
 
 .glassmorphic-card:hover {
     @apply transform -translate-y-2 shadow-2xl;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+  opacity: 0;
 }
