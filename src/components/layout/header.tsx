@@ -60,7 +60,7 @@ const Header = () => {
             <div className="md:hidden">
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" aria-label="Open menu">
+                  <Button variant="ghost" size="icon" aria-label="Open menu" className="hover:bg-transparent focus-visible:bg-transparent">
                     <Menu />
                   </Button>
                 </SheetTrigger>
