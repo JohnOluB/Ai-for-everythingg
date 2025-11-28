@@ -3,25 +3,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const pillars = [
   {
-    icon: <BrainCircuit className="w-10 h-10 text-white/90" />,
+    icon: <BrainCircuit className="w-10 h-10 text-primary" />,
     title: "Head",
     subtitle: "Understand",
     description: "Grasp how AI works and why it matters in your daily life. Build foundational knowledge that empowers decision-making.",
-    gradient: "from-blue-500 to-cyan-400",
+    bgColor: "bg-card",
   },
   {
-    icon: <Wrench className="w-10 h-10 text-white/90" />,
+    icon: <Wrench className="w-10 h-10 text-primary" />,
     title: "Hand",
     subtitle: "Build",
     description: "Create with AI tools, develop projects, and solve problems that matter to your local community.",
-    gradient: "from-purple-500 to-pink-500",
+    bgColor: "bg-card",
   },
   {
-    icon: <Heart className="w-10 h-10 text-white/90" />,
+    icon: <Heart className="w-10 h-10 text-primary" />,
     title: "Heart",
     subtitle: "Create",
     description: "Share knowledge, mentor others, and shape a more inclusive AI future for Kerala and beyond.",
-    gradient: "from-orange-500 to-red-500",
+    bgColor: "bg-card",
   },
 ];
 
@@ -42,12 +42,12 @@ const ThreePillarsSection = () => {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className={`relative rounded-2xl p-8 flex flex-col items-center text-center text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-br ${pillar.gradient}`}
+              className={`relative rounded-2xl p-8 flex flex-col items-center text-center overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${pillar.bgColor} border`}
             >
-              <div className="mb-6">{pillar.icon}</div>
+              <div className="mb-6 p-4 bg-background rounded-full">{pillar.icon}</div>
               <h3 className="font-headline text-4xl font-bold">{pillar.title}</h3>
-              <p className="text-lg font-semibold mb-4 opacity-80">{pillar.subtitle}</p>
-              <p className="opacity-90 flex-grow">{pillar.description}</p>
+              <p className="text-lg font-semibold mb-4 text-muted-foreground">{pillar.subtitle}</p>
+              <p className="text-foreground/80 flex-grow">{pillar.description}</p>
             </div>
           ))}
         </div>
